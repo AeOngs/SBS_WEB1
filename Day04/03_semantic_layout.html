@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨트 요소 - 레이아웃</title>
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- font-family: 'Noto Sans KR', sans-serif; -->
+    <!-- 폰트 2 - 배달의 민족 - 도현체 -->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- font-family: 'Do Hyeon', sans-serif; -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        /* # : id 속성을 지정하는 선택자 */
+        #header {
+            background-color: lightgray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        nav {
+            float: left;
+            width: 20%;
+            height: 300px;
+            background-color: #339999;
+            padding: 20px;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-origin: #f1f1f1;
+            height: 300px;
+        }
+
+        section::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        footer {
+            background-color: #ffcc00;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* 반응형 적용 - 가로 사이즈 600px 이하 */
+        @media screen and (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>semantic 태그를 이용한 레이아웃</h1>
+    <header>
+        <h2>HEADER</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <!-- 한 줄 복사 : alt + shift + ↓ -->
+                <li><a href="#">menu 001</a></li>
+                <li><a href="#">menu 002</a></li>
+                <li><a href="#">menu 003</a></li>
+                <li><a href="#">menu 004</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>SBS 아카데미</h1>
+            <p>
+                이 했던 벌레는 청춘이 듯합니다. 한 말 어머님, 위에도 하나 언덕 나의 강아지, 우는 버리었습니다. 내 하나에 아스라히 별 나는 별 못 멀리 듯합니다. 나의 걱정도 별빛이 된 새워 까닭입니다. 계절이 헤일 나는 있습니다. 하나의 한 했던 노루, 피어나듯이 계십니다. 이런 별 가난한 없이 헤는 같이 계십니다.
+            </p>
+            <p>
+                이 했던 벌레는 청춘이 듯합니다. 한 말 어머님, 위에도 하나 언덕 나의 강아지, 우는 버리었습니다. 내 하나에 아스라히 별 나는 별 못 멀리 듯합니다. 나의 걱정도 별빛이 된 새워 까닭입니다. 계절이 헤일 나는 있습니다. 하나의 한 했던 노루, 피어나듯이 계십니다. 이런 별 가난한 없이 헤는 같이 계십니다.
+            </p>            
+        </article>
+    </section>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
+</html>
